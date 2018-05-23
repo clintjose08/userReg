@@ -1,0 +1,18 @@
+CMD inside folder : 
+1.	Npm install
+2.	Go to “./server” -> node server.js
+3.	Postman post request for registration:
+                                http://localhost:3001/registration/submit
+                                To send data mimicking data from UI, go inside body – x-www-form-urlencoded
+                                key: data
+                                value:  {"UserName":"name","Password":"pass","Name":"Name","Mobile":"9988776655","Email":"mail @gmail.com"}
+4.	Postman GET request for login
+                                http://localhost:3001/login/submit?uname=Gow&pass=qwerty
+5.	Postman POST for profile update
+                http://localhost:3001/profile/edit
+                Need to send session id through Header. So go to Header tab,
+                Give key as Cookie, value as AppSession={<SessionId from loginCredentials.json File>}
+                                Also need to set new data. So go to Body tab,
+                                To send data mimicking data from UI, go inside body – x-www-form-urlencoded
+                                Give key as Data and
+                                value as {"UserName":"UserId", "Password":"pass", "Name":"new Name", "Mobile":"new mobile", "Email":"newmail@gmail.com" }
